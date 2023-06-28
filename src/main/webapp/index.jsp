@@ -5,9 +5,7 @@
 	<title>JSP - Hello World</title>
 </head>
 <body>
-	<h1><%= "Hello World!" %>
-	</h1>
-	<br/>
-	<a href="hello-servlet">Hello Servlet</a>
+	<h1>This is an <span style="color: cornflowerblue;">Index</span> page</h1>
+	<a href="controller">Controller</a>
 </body>
 </html>

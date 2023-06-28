@@ -1,4 +1,4 @@
-package com.itmo.web.lab2;
+package com.itmo.web.lab2.point;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,20 +7,20 @@ import java.util.List;
 
 
 public class PointService implements Serializable {
-    private final List<PointBean> pointBeanList;
+    private final List<Point> pointList;
 
     public PointService() {
-        this.pointBeanList = new ArrayList<>();
+        this.pointList = new ArrayList<>();
     }
-    public PointService(PointBean[] pointBeans) {
-        this.pointBeanList = Arrays.asList(pointBeans);
+    public PointService(Point[] points) {
+        this.pointList = Arrays.asList(points);
     }
-    public PointService(List<PointBean> pointBeanList) {
-        this.pointBeanList = pointBeanList;
+    public PointService(List<Point> pointList) {
+        this.pointList = pointList;
     }
 
-    public List<PointBean> getPointBeanList() {
-        return pointBeanList;
+    public List<Point> getPointList() {
+        return pointList;
     }
 
 }

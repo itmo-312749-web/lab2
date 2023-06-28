@@ -1,18 +1,24 @@
-package com.itmo.web.lab2;
+package com.itmo.web.lab2.point;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class PointBean implements Serializable {
+public class Point implements Serializable {
     private double x;
     private double y;
     private double r;
     private boolean hit;
-    private long executionTime; //in nanoseconds
     private LocalDateTime timestamp;
+    private long executionTime; //in nanoseconds
 
-    public PointBean() {}
+    public Point() {}
+
+    public Point(double x, double y, double r) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+    }
 
     public double getX() {
         return x;
@@ -46,14 +52,6 @@ public class PointBean implements Serializable {
         this.hit = hit;
     }
 
-    public long getExecutionTime() {
-        return executionTime;
-    }
-
-    public void setExecutionTime(long executionTime) {
-        this.executionTime = executionTime;
-    }
-
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
@@ -66,6 +64,14 @@ public class PointBean implements Serializable {
 
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public long getExecutionTime() {
+        return executionTime;
+    }
+
+    public void setExecutionTime(long executionTime) {
+        this.executionTime = executionTime;
     }
 
     @Override
