@@ -9,8 +9,8 @@ public class Point implements Serializable {
     private double y;
     private double r;
     private boolean hit;
-    private LocalDateTime timestamp;
     private long executionTime; //in nanoseconds
+    private LocalDateTime timestamp;
 
     public Point() {}
 
@@ -52,6 +52,14 @@ public class Point implements Serializable {
         this.hit = hit;
     }
 
+    public long getExecutionTime() {
+        return executionTime;
+    }
+
+    public void setExecutionTime(long executionTime) {
+        this.executionTime = executionTime;
+    }
+
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
@@ -64,14 +72,6 @@ public class Point implements Serializable {
 
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
-    }
-
-    public long getExecutionTime() {
-        return executionTime;
-    }
-
-    public void setExecutionTime(long executionTime) {
-        this.executionTime = executionTime;
     }
 
     @Override

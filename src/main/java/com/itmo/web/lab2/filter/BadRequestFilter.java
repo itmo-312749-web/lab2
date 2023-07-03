@@ -19,8 +19,10 @@ public class BadRequestFilter implements Filter {
 
         if (httpRequest.getMethod().equals("POST")) {
             HttpRequestValidator requestValidator = new BadRequestValidator(httpRequest);
-            if (!requestValidator.isValid())
+            if (!requestValidator.isValid()) {
                 httpRequest.getRequestDispatcher("/errors/badRequest.jsp").forward(httpRequest, response);
+                return;
+            }
         }
 
         chain.doFilter(request, response);

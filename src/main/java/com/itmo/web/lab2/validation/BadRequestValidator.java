@@ -19,7 +19,7 @@ public class BadRequestValidator extends HttpRequestValidator{
             isXValid = false;
         }
 
-        String strY = request.getParameter("x");
+        String strY = request.getParameter("y");
         boolean isYValid = true;
         try {
             Double y = Double.parseDouble(strY);

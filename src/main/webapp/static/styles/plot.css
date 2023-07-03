@@ -1,0 +1,17 @@
+.plot-holder {
+    position: relative;
+    background-color: #ffffff;
+
+    min-height: 420px;
+
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.shape {
+    fill: rgba(196, 196, 196, 0.5);
+}
+
+.shape:hover {
+    stroke-width: 2px;
+    fill-opacity: .75;
+}

@@ -23,4 +23,10 @@ public class PointService implements Serializable {
         return pointList;
     }
 
+    public Point getLastPoint() {
+        if (pointList.size() < 1)
+            return null;
+        return pointList.get(pointList.size() - 1);
+    }
+
 }

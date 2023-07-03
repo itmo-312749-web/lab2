@@ -78,8 +78,10 @@ public class ControllerServlet extends HttpServlet {
 
         servletContext
                 .getRequestDispatcher("/results.jsp")
-                .include(request, response);
+                .forward(request, response);
     }
+
+
 
     @Override
     protected void service(

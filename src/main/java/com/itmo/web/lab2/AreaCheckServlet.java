@@ -46,10 +46,10 @@ public class AreaCheckServlet extends HttpServlet {
         double x = (Double) request.getAttribute("doubleX");
         double y = (Double) request.getAttribute("doubleY");
         double r = (Double) request.getAttribute("doubleR");
-        boolean isDotInsideArea = checkerList.stream()
+        boolean isPointInsideArea = checkerList.stream()
                 .anyMatch(checker -> checker.makeCheck(x, y, r));
 
-        request.setAttribute("isPointInsideArea", isDotInsideArea);
+        request.setAttribute("isPointInsideArea", isPointInsideArea);
 
     }
 }
